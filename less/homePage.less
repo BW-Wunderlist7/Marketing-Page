@@ -7,10 +7,12 @@
 
     h1, h2, h3, h4, p {
         color:  @contentText;
-    }
-}
+    } // closes the h's
+    .colFlex(@justify:space-around);
+} // closes mainContent
+
 .flexContainer {
-    .rowFlex();
+    .rowFlex(@justify:space-around);
     width: 100%;
 }
 .container {
@@ -19,8 +21,11 @@
     h1, h2, h3, h4 {
         color: @containerHeading
     }
-    width: 40%;
+    width: 45%;
     padding: 0 2%;
+    margin: 2%;
 }
+
+
 
 
