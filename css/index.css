@@ -145,7 +145,8 @@ h5 {
   font-family: 'Montserrat', sans-serif;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 5rem;
+  font-weight: bold;
 }
 h2 {
   font-size: 3rem;
@@ -171,9 +172,61 @@ header h1,
 header h2,
 header h3,
 header h4,
-header h5,
-header p {
+header h5 {
   color: #f7f8f3;
+  padding: 2%;
+}
+header nav {
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(44, 61, 99, 0.75);
+  z-index: 55;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header nav a:link,
+header nav a:visited {
+  text-decoration: none;
+  color: #f7f8f3;
+  font-size: 2rem;
+}
+header img {
+  width: 100%;
+  height: auto;
+  margin-top: 5rem;
+  z-index: -1;
+}
+header .ctaContainer {
+  position: relative;
+}
+header .bottomLeft {
+  position: absolute;
+  bottom: 15%;
+  left: 25%;
+  background-color: rgba(44, 61, 99, 0.75);
+}
+header .ctaButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #aadcca;
+  color: #f7f8f3;
+  cursor: pointer;
+  width: 25%;
+  height: 45px;
+  font-size: 2rem;
+  border: none;
+  border-radius: 5px;
+  margin: 2%;
+}
+header .ctaButton a:link,
+header .ctaButton a:visited {
+  text-decoration: none;
+  color: #f7f8f3;
+  font-size: 2rem;
 }
 footer {
   background-color: #2c3d63;
@@ -187,7 +240,6 @@ footer p {
   color: #f7f8f3;
 }
 .mainContent {
-  width: 95%;
   max-width: (max-width: 1200px);
   margin: 0 auto;
   padding: 4%;

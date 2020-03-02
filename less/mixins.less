@@ -12,6 +12,20 @@
   align-items: @align;
 }
 
+.button(@bgColor:@buttonBG, @fontColor:@buttonColor, @width:200px) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: @bgColor;
+  color: @fontColor;
+  cursor: pointer;
+  width: @width;
+  height: 45px;
+  font-size: 2rem;
+    border: none;
+  border-radius: 5px;
+}
+
 // might play with this agian later
 // .animateColor(@name, @from, @to) {
 
