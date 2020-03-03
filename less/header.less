@@ -1,0 +1,60 @@
+// Header Styles in this file
+
+header {
+  background-color: @headerBG;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: @headerColor;
+    padding: 2%;
+  } // closes header text styles
+  nav {
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: fade(@headerBG, 75%);
+    z-index: 55;
+    .rowFlex();
+
+    a:link,
+    a:visited {
+      text-decoration: none;
+      //   background-color: @headerBG;
+      color: @headerColor;
+      font-size: 2rem;
+    } //  closes <a> style
+  } // closes <nav> style
+  img {
+    width: 100%;
+    height: auto;
+    margin-top: 5rem;
+    z-index: -1;
+  } // closes img style
+
+  .ctaContainer {
+    position: relative;
+    // text-align: center;
+  } // closes .ctaContainer
+
+  .bottomLeft {
+    position: absolute;
+    bottom: 15%;
+    left: 25%;
+    background-color: fade(@headerBG, 75%);
+  } // closes .bottomLeft
+  .ctaButton {
+    .button(@width:25%);
+    margin: 2%;
+    a:link,
+    a:visited {
+      text-decoration: none;
+      //   background-color: @headerBG;
+      color: @headerColor;
+      font-size: 2rem;
+    }
+  }
+} // closes <header> style
