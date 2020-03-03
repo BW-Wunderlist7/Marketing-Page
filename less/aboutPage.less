@@ -16,20 +16,32 @@
   width: 80%;
   padding: 1% 2%;
   margin: 2%;
-}
+  @media @tablet {
+    width: 90%;
+  }
+  @media @mobile {
+    width: 95%;
+  }
+} // closes meetContainer
 .meetFlex {
-    .rowFlex();
+  .rowFlex();
+  img {
+    width: 40%;
+    height: auto;
+    padding: 0 2% 2% 2%;
+  }
+  @media @mobile {
+    .colFlex();
     img {
-        width: 40%;
-        height: auto;
-        padding: 0 2% 2% 2%;
+      width: 90%;
     }
-}
+  }
+} // closes meetFlex
 ul {
   margin-left: 2%;
 }
 li {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 .gitHub {
   list-style-image: url("/media/github-brands.png");

@@ -207,7 +207,8 @@ header nav a:visited {
     border-bottom: 1px solid #f7f8f3;
   }
   header nav #wlLink,
-  header nav #mtLink {
+  header nav #mtLink,
+  header nav #contact {
     display: none;
   }
 }
@@ -320,7 +321,7 @@ footer a:visited {
 .container {
   background-color: #f7f8f3;
   width: 45%;
-  min-height: 450px;
+  min-height: 550px;
   padding: 2%;
   margin: 2%;
 }
@@ -334,6 +335,7 @@ footer a:visited {
 @media (max-width: 800px) {
   .container {
     width: 100%;
+    min-height: 300px;
   }
 }
 @media (max-width: 500px) {
@@ -357,6 +359,16 @@ footer a:visited {
 .meetContainer h4 {
   color: #6c887e;
 }
+@media (max-width: 800px) {
+  .meetContainer {
+    width: 90%;
+  }
+}
+@media (max-width: 500px) {
+  .meetContainer {
+    width: 95%;
+  }
+}
 .meetFlex {
   display: flex;
   justify-content: space-around;
@@ -366,6 +378,17 @@ footer a:visited {
   width: 40%;
   height: auto;
   padding: 0 2% 2% 2%;
+}
+@media (max-width: 500px) {
+  .meetFlex {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .meetFlex img {
+    width: 90%;
+  }
 }
 ul {
   margin-left: 2%;
