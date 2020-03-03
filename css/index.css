@@ -149,7 +149,7 @@ h1 {
   font-weight: bold;
 }
 h2 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   padding-bottom: 10px;
 }
 h3 {
@@ -290,5 +290,20 @@ footer a:visited {
 .container h2,
 .container h3,
 .container h4 {
+  color: #6c887e;
+}
+#meetTeamH1 {
+  padding-top: 5rem;
+}
+.meetContainer {
+  background-color: #f7f8f3;
+  width: 94%;
+  padding: 0 2%;
+  margin: 2%;
+}
+.meetContainer h1,
+.meetContainer h2,
+.meetContainer h3,
+.meetContainer h4 {
   color: #6c887e;
 }
