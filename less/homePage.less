@@ -1,31 +1,49 @@
 .mainContent {
-    // width: 95%;
-    max-width: @desktop;
-    margin: 0 auto;
-    padding: 4%;
-    background-color: @contentBG;
+  // width: 95%;
+  max-width: @desktop;
+  margin: 0 auto;
+  padding: 4%;
+  background-color: @contentBG;
 
-    h1, h2, h3, h4, p {
-        color:  @contentText;
-    } // closes the h's
-    .colFlex(@justify:space-around);
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    color: @contentText;
+  } // closes the h's
+  .colFlex(@justify:space-around);
 } // closes mainContent
 
 .flexContainer {
-    .rowFlex(@justify:space-around);
-    width: 100%;
-}
+  .rowFlex(@justify:space-around);
+  width: 100%;
+
+  @media @tablet {
+    .colFlex();
+  } //closes tablet media
+} // closes .flexContainer
 .container {
-    background-color: @containerBG;
+  background-color: @containerBG;
 
-    h1, h2, h3, h4 {
-        color: @containerHeading
-    }
-    width: 45%;
-    padding: 0 2%;
-    margin: 2%;
-}
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: @containerHeading;
+    margin-top: 2%;
+  }
+  width: 45%;
+  min-height: 450px;
+  padding: 2%;
+  margin: 2%;
 
+  @media @tablet {
+    width: 100%;
+  } // closes tablet media
 
-
-
+  @media @mobile {
+      width: 100%;
+      min-height: 300px; 
+  }
+} // closes .container

@@ -107,10 +107,6 @@ section {
 body {
   line-height: 1;
 }
-ol,
-ul {
-  list-style: none;
-}
 blockquote,
 q {
   quotes: none;
@@ -131,6 +127,8 @@ table {
 }
 html {
   font-size: 62.5%;
+  max-width: 1440px;
+  margin: 0 auto;
   background-color: #f7f8f3;
 }
 html,
@@ -156,10 +154,20 @@ h3 {
   font-size: 2.5rem;
   padding-bottom: 10px;
 }
-p {
+p,
+li {
   line-height: 1.5;
   font-size: 1.5rem;
   padding-bottom: 10px;
+}
+ul {
+  padding: 0 1.5rem;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #2c3d63;
 }
 img {
   max-width: 100%;
@@ -181,6 +189,7 @@ header nav {
   position: fixed;
   top: 0;
   width: 100%;
+  max-width: 1440px;
   background-color: rgba(44, 61, 99, 0.75);
   z-index: 55;
   display: flex;
@@ -189,15 +198,29 @@ header nav {
 }
 header nav a:link,
 header nav a:visited {
-  text-decoration: none;
   color: #f7f8f3;
   font-size: 2rem;
+}
+@media (max-width: 500px) {
+  header nav {
+    position: static;
+    border-bottom: 1px solid #f7f8f3;
+  }
+  header nav #wlLink,
+  header nav #mtLink {
+    display: none;
+  }
 }
 header img {
   width: 100%;
   height: auto;
   margin-top: 5rem;
   z-index: -1;
+}
+@media (max-width: 500px) {
+  header img {
+    display: none;
+  }
 }
 header .ctaContainer {
   position: relative;
@@ -207,6 +230,13 @@ header .bottomLeft {
   bottom: 15%;
   left: 25%;
   background-color: rgba(44, 61, 99, 0.75);
+}
+@media (max-width: 500px) {
+  header .bottomLeft {
+    position: static;
+    width: 100%;
+    padding: 2%;
+  }
 }
 header .ctaButton {
   display: flex;
@@ -252,7 +282,6 @@ footer img {
 }
 footer a:link,
 footer a:visited {
-  text-decoration: none;
   color: #f7f8f3;
   font-size: 2rem;
   padding: 0 2%;
@@ -280,10 +309,19 @@ footer a:visited {
   align-items: center;
   width: 100%;
 }
+@media (max-width: 800px) {
+  .flexContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .container {
   background-color: #f7f8f3;
   width: 45%;
-  padding: 0 2%;
+  min-height: 450px;
+  padding: 2%;
   margin: 2%;
 }
 .container h1,
@@ -291,14 +329,26 @@ footer a:visited {
 .container h3,
 .container h4 {
   color: #6c887e;
+  margin-top: 2%;
+}
+@media (max-width: 800px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+    min-height: 300px;
+  }
 }
 #meetTeamH1 {
   padding-top: 5rem;
 }
 .meetContainer {
   background-color: #f7f8f3;
-  width: 94%;
-  padding: 0 2%;
+  width: 80%;
+  padding: 1% 2%;
   margin: 2%;
 }
 .meetContainer h1,
@@ -306,4 +356,26 @@ footer a:visited {
 .meetContainer h3,
 .meetContainer h4 {
   color: #6c887e;
+}
+.meetFlex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.meetFlex img {
+  width: 40%;
+  height: auto;
+  padding: 0 2% 2% 2%;
+}
+ul {
+  margin-left: 2%;
+}
+li {
+  font-size: 1.8rem;
+}
+.gitHub {
+  list-style-image: url("/media/github-brands.png");
+}
+.linkedIn {
+  list-style-image: url("/media/linkedin-in-brands.png");
 }
