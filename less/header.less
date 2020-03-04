@@ -16,23 +16,34 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+    max-width: 1440px;
     background-color: fade(@headerBG, 75%);
     z-index: 55;
     .rowFlex();
 
     a:link,
     a:visited {
-      text-decoration: none;
-      //   background-color: @headerBG;
       color: @headerColor;
       font-size: 2rem;
     } //  closes <a> style
+    @media @mobile {
+      position: static;
+      border-bottom: 1px solid @headerColor;
+      #wlLink,
+      #mtLink,
+      #contact {
+        display: none;
+      }
+    } // closes mobile media
   } // closes <nav> style
   img {
     width: 100%;
     height: auto;
     margin-top: 5rem;
     z-index: -1;
+    @media @mobile {
+      display: none;
+    } // closes mobile media
   } // closes img style
 
   .ctaContainer {
@@ -45,6 +56,11 @@ header {
     bottom: 15%;
     left: 25%;
     background-color: fade(@headerBG, 75%);
+    @media @mobile {
+      position: static;
+      width: 100%;
+      padding: 2%;
+    } // closes mobile media
   } // closes .bottomLeft
   .ctaButton {
     .button(@width:25%);

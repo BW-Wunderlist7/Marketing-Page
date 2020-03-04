@@ -4,6 +4,8 @@
 
 html {
   font-size: 62.5%;
+  max-width: 1440px;
+  margin: 0 auto;
   background-color: @htmlBG;
 }
 
@@ -36,11 +38,21 @@ h3 {
   padding-bottom: 10px;
 }
 
-p {
+p, li {
   line-height: 1.5;
   font-size: 1.5rem;
   padding-bottom: 10px;
 }
+ul {
+  padding: 0 1.5rem;
+}
+
+    a:link,
+    a:visited {
+      text-decoration: none;
+      font-size: 1.8rem;
+      color: @contentText;
+    } //  closes <a> style
 
 img {
   max-width: 100%;
