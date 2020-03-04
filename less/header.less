@@ -13,6 +13,8 @@ header {
   } // closes header text styles
   nav {
     height: 5rem;
+    overflow: hidden;
+
     position: fixed;
     top: 0;
     width: 100%;
@@ -25,9 +27,17 @@ header {
     a:visited {
       color: @headerColor;
       font-size: 2rem;
+      padding: 1.5rem;
+      width: 25%;
+      text-align: center;
+      &:hover {
+        background-color: @buttonBG;
+        color: @buttonColor;
+      }
     } //  closes <a> style
     @media @mobile {
       position: static;
+      height: 6.5rem;
       border-bottom: 1px solid @headerColor;
       #wlLink,
       #mtLink,
@@ -46,6 +56,10 @@ header {
     } // closes mobile media
   } // closes img style
 
+  .teamContactHeader {
+    padding: 2%;
+  }
+
   .ctaContainer {
     position: relative;
     // text-align: center;
@@ -55,6 +69,7 @@ header {
     position: absolute;
     bottom: 15%;
     left: 25%;
+    padding: 2%;
     background-color: fade(@headerBG, 75%);
     @media @mobile {
       position: static;
@@ -64,13 +79,20 @@ header {
   } // closes .bottomLeft
   .ctaButton {
     .button(@width:25%);
-    margin: 2%;
+    &:hover {
+      border: 2px solid @buttonColor;
+    }
     a:link,
     a:visited {
       text-decoration: none;
       //   background-color: @headerBG;
       color: @headerColor;
       font-size: 2rem;
+      width: 100%;
     }
   }
 } // closes <header> style
+
+.teamContactCTA {
+  padding: 2%;
+}
