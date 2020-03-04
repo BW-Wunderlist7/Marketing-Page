@@ -333,7 +333,7 @@ footer a:visited {
 .flexContainer {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
 }
 @media (max-width: 800px) {
@@ -347,7 +347,6 @@ footer a:visited {
 .container {
   background-color: #f7f8f3;
   width: 45%;
-  min-height: 550px;
   padding: 2%;
   margin: 2%;
 }
@@ -368,6 +367,14 @@ footer a:visited {
   .container {
     width: 100%;
     min-height: 300px;
+  }
+}
+.screenshot {
+  padding: 1% 0;
+}
+@media (min-width: 800px) {
+  .screenshot:hover {
+    transform: scale(2) translate(-80px, -50px);
   }
 }
 #meetTeamH1 {
