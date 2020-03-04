@@ -277,6 +277,21 @@ header .ctaButton a:visited {
   font-size: 2rem;
   width: 100%;
 }
+@media (max-width: 500px) {
+  header .ctaButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #aadcca;
+    color: #f7f8f3;
+    cursor: pointer;
+    width: 40%;
+    height: 45px;
+    font-size: 2rem;
+    border: none;
+    border-radius: 5px;
+  }
+}
 .teamContactCTA {
   padding: 2%;
 }
@@ -344,6 +359,21 @@ footer a:visited {
     align-items: center;
   }
 }
+.flexContainerLower {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+@media (max-width: 800px) {
+  .flexContainerLower {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .container {
   background-color: #f7f8f3;
   width: 45%;
@@ -369,12 +399,37 @@ footer a:visited {
     min-height: 300px;
   }
 }
+#features {
+  width: 80%;
+  padding: 2% 15%;
+}
+@media (max-width: 800px) {
+  #features {
+    width: 100%;
+  }
+}
 .screenshot {
   padding: 1% 0;
 }
 @media (min-width: 800px) {
-  .screenshot:hover {
-    transform: scale(2) translate(-80px, -50px);
+  #topLeft:hover {
+    border: 1px solid #2c3d63;
+    transition: transform 0.5s;
+    transform: scale(2) translate(100px, 0px);
+  }
+}
+@media (min-width: 800px) {
+  #topRight:hover {
+    border: 1px solid #2c3d63;
+    transition: transform 0.5s;
+    transform: scale(2) translate(-100px, 0px);
+  }
+}
+@media (min-width: 800px) {
+  #bottom:hover {
+    border: 1px solid #2c3d63;
+    transition: transform 0.5s;
+    transform: scale(2) translate(0px, -100px);
   }
 }
 #meetTeamH1 {
