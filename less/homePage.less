@@ -1,5 +1,4 @@
 .mainContent {
-  // width: 95%;
   max-width: @desktop;
   margin: 0 auto;
   padding: 4%;
@@ -9,9 +8,13 @@
   h2,
   h3,
   h4,
-  p {
+  p,
+  li {
     color: @contentText;
   } // closes the h's
+  ul, li {
+    margin-left: 2%;
+  }
   .colFlex(@justify:space-around);
 } // closes mainContent
 
